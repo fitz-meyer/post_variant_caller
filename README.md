@@ -5,7 +5,7 @@ downsample_BAM.sh - has now been incorporated directly into the variant caller p
 <br>
 run_SNPGenie.sh - runs SNPGenie on reformatted merged vcf files via sbatch <br>
 <br>
-vcf_reformat_PY.sh - calls make_vcf_format_sample_cols_DPAD(AF).py to reformat all vcf files in working directory 
+vcf_reformat_PY.sh - calls make_vcf_format_sample_cols_DPAD(AF).py to reformat all vcf files in working directory <br>
 <br>
 make_vcf_format_sample_cols_DPAD.py - extracts DP and AD values from INFO column and reformats LoFreq vcf files (.bam.snv.vcf) to contain FORMAT and SAMPLE columns <br>
 <br>

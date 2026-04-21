@@ -9,5 +9,14 @@ vcf_reformat_PY.sh - calls make_vcf_format_sample_cols_DPAD(AF).py to reformat a
 <br>
 make_vcf_format_sample_cols_DPAD.py - extracts DP and AD values from INFO column and reformats LoFreq vcf files (.bam.snv.vcf) to contain FORMAT and SAMPLE columns <br>
 <br>
-make_vcf_format_sample_cols_DPADAF.py - same as above but also extracts AF values
+make_vcf_format_sample_cols_DPADAF.py - same as above but also extracts AF values <br>
+<br>
+make_vcf_format_sample scripts must be run prior to compressing: <br>
+```bgzip *FORSAM.vcf``` <br>
+indexing: <br>
+```for F in *.vcf.gz ; do   tabix -f -p vcf ${F}  ; done``` <br>
+merging: <br>
+```bcftools merge -o merged.vcf *FORSAM.vcf.gz``` <br>
+and finally running SNPGenie: <br>
+```sbatch run_SNPGenie.sh```
 

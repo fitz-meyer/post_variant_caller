@@ -21,7 +21,7 @@ desired_header = """##fileformat=VCFv4.0
 ##FILTER=<ID=min_dp_40,Description="Minimum Coverage 40">
 ##FORMAT=<ID=DP,Number=1,Type=Integer,Description="Read Depth">
 ##FORMAT=<ID=AD,Number=R,Type=Integer,Description="Raw Allele Counts">
-##FORMAT=<ID=AF,Number=1,Type=Float,Description="Alt Allele Frequency">"""
+##FORMAT=<ID=AF,Number=A,Type=Float,Description="Alt Allele Frequency">"""
 
 print(desired_header)
 

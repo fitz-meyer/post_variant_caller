@@ -10,7 +10,7 @@ make_vcf_format_sample_cols_DPADAF.py - same as above but also extracts AF value
 vcf_reformat_PY.sh - calls make_vcf_format_sample_cols_DPAD(AF).py to reformat all vcf files in working directory <br>
 ^ requires bcftools for bgzip, and python
 <br>
-```ml python/3.10.2```
+```ml python/3.10.2``` <br>
 ```./vcf_reformat_PY.sh```
 run_SNPGenie.sh - runs SNPGenie on reformatted merged vcf files via sbatch <br>
 <br>

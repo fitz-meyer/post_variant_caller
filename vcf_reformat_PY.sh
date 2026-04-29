@@ -20,7 +20,7 @@ do
 	# define output file name
 	output_file=${file_base/.KR868734.1.bam.snv.vcf/_FORSAM.vcf}
 	
-	python make_vcf_format_sample_cols.py $file_base > $output_file
+	python make_vcf_format_sample_cols_DPADAF.py $file_base > $output_file
 	
 	bgzip $output_file
 

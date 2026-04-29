@@ -2,6 +2,8 @@
 #Date: 3/30/26
 #Author: Emily Fitzmeyer
 
+# activate bcftools conda environment before running 
+
 # define arguments passed as 'file_base'
 file_base=$@
 

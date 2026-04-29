@@ -11,7 +11,8 @@ vcf_reformat_PY.sh - calls make_vcf_format_sample_cols_DPAD(AF).py to reformat a
 ^ requires bcftools for bgzip, and python
 <br>
 ```ml python/3.10.2``` <br>
-```./vcf_reformat_PY.sh```
+```./vcf_reformat_PY.sh```<br>
+<br>
 run_SNPGenie.sh - runs SNPGenie on reformatted merged vcf files via sbatch <br>
 <br>
 make_vcf_format_sample scripts must be run prior to indexing: <br>

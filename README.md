@@ -14,6 +14,7 @@ vcf_reformat_PY.sh - calls make_vcf_format_sample_cols_DPAD(AF).py to reformat a
 ```./vcf_reformat_PY.sh```<br>
 <br>
 run_SNPGenie.sh - runs SNPGenie on reformatted merged vcf files via sbatch <br>
+^ edit to specify input file, output directory, and paths to snpgenie.pl and reference files <br>
 <br>
 make_vcf_format_sample scripts must be run prior to indexing: <br>
 ```for F in *.vcf.gz ; do   tabix -f -p vcf ${F}  ; done``` <br>

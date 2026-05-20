@@ -6,10 +6,10 @@ downsample_BAM.sh - has now been incorporated directly into the variant caller p
 make_vcf_format_sample_cols_DPAD.py - extracts DP and AD values from INFO column and reformats LoFreq vcf files (.bam.snv.vcf) to contain FORMAT and SAMPLE columns for dN/dS calculations with SNPGenie. <br>
 <br>
 make_vcf_format_sample_cols_DPADAF.py - same as above but also extracts AF values <br>
-^ this one does not work with snpGenie - SNPGenie only expects DP:AD, Shannon's index calculations require AF <br>
+^ this one does not work with SNPGenie - SNPGenie only expects DP:AD, Shannon's index calculations require AF <br>
 <br>
 make_vcf_format_sample_cols_GTDPADAF.py - same as above but also extracts GT values <br>
-^ this one does not work with snpGenie - FST calculations with Pixy require GT and AF <br>
+^ this one does not work with SNPGenie - FST calculations with Pixy require GT and AF <br>
 <br>
 vcf_reformat_PY.sh - calls make_vcf_format_sample_cols_DPAD(AF).py to reformat all vcf files in working directory <br>
 ^ requires bcftools for bgzip, and python

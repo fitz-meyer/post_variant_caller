@@ -1,0 +1,42 @@
+#/bin/sh
+#Date: 6/04/26
+#Author: Emily Fitzmeyer 
+#Activate bcftools_env before running
+#Run in directory with files you want to extract info from like so: ./thisScript.sh
+
+fqdir=...
+for file in `ls *.vcf`; do
+    reseqFile=${file/.KR868734.1.bam.snv.vcf/_reseq.KR868734.1.bam.snv.vcf}
+	
+    # Generate the output filenames 
+    AF_info=${file/.KR868734.1.bam.snv.vcf/.csv}
+
+    # Ensure the corresponding RESEQ file exists
+    if [[ -f $reseqFile ]] ; then
+        echo "Extracting AF INFO from $file and $reseqFile"
+
+        # Get INFO from file
+        bcftools query -f'[%POS,%REF,%ALT,%AF]' $file > $AF_info
+
+        # Get INFO from RESEQ file
+        bcftools query -f'[%POS,%REF,%ALT,%AF]' $reseqFile >> $AF_info
+
+        echo "Done with $file pair."
+    else
+        echo "Warning: Corresponding RESEQ file not found for $file"
+    fi
+    
+done
+
+mkdir AF_info_files
+mv *.csv AF_info_files/
+
+echo "Done :D"
+
+
+
+
+
+
+
+

@@ -1,6 +1,10 @@
 # post_variant_caller
 scripts used for file manipulation and analysis after variant caller (LoFreq) pipeline <br>
 <br>
+<br>
+downsample_pairedEnd.sh - downsample paired fastq files with seqtk. <br>
+extract_AF_pairedVCFs.sh - extract allele frequency, SNV genome position, and ALT and REF bases from paired VCF files. Compare AF between resequenced file pairs to determine AF threshold to account for batch effects. <br>
+<br>
 downsample_BAM.sh - has now been incorporated directly into the variant caller pipeline and does not need to be called separately. <br>
 <br>
 make_vcf_format_sample_cols_DPAD.py - extracts DP and AD values from INFO column and reformats LoFreq vcf files (.bam.snv.vcf) to contain FORMAT and SAMPLE columns for dN/dS calculations with SNPGenie. <br>
@@ -25,5 +29,7 @@ make_vcf_format_sample scripts must be run prior to indexing: <br>
 merging: <br>
 ```bcftools merge -o merged.vcf *FORSAM.vcf.gz``` <br>
 and finally running SNPGenie: <br>
-```sbatch run_SNPGenie.sh```
+```sbatch run_SNPGenie.sh``` <br>
+
+
 

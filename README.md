@@ -40,13 +40,12 @@ before running pixy (using GTDPADAF merge files) - invariant sites must be fille
 bcftools +setGT test_merged.vcf.gz -- \
   -t "." \
   -n "0" | \
-  bcftools view -O z -o test_filled.vcf.gz
-``` <br>
+  bcftools view -O z -o test_filled.vcf.gz``` <br>
 and indexed <br>
-```tabix test_filled.vcf.gz```<br>
+
+```tabix test_filled.vcf.gz``` <br>
 <br>
-```
-pixy --stats fst \
+```pixy --stats fst \
 --vcf test_filled.vcf.gz \
 --populations sample_IDs.txt \
 --window_size 10287 \

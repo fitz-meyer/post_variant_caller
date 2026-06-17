@@ -10,7 +10,7 @@ file_base=$@
 # alert the user if input is not supplied
 if [ $# == 0 ]
 then
-	echo -e "true_barcodes>>>>> ERROR>>>>>
+	echo -e ">>>>>ERROR>>>>>
 	Please provide input like so: ./this_script file.vcf"
 fi
 

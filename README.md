@@ -36,20 +36,24 @@ and finally running intended analysis (SNPGenie): <br>
 <br>
 <br>
 before running pixy (using GTDPADAF merge files) - invariant sites must be filled with '0' for GT: <br>
-```bcftools +setGT test_merged.vcf.gz -- \
+```
+bcftools +setGT test_merged.vcf.gz -- \
   -t "." \
   -n "0" | \
-  bcftools view -O z -o test_filled.vcf.gz``` <br>
-and indexed<br>
+  bcftools view -O z -o test_filled.vcf.gz
+``` <br>
+and indexed <br>
 ```tabix test_filled.vcf.gz```<br>
 <br>
-```pixy --stats fst \
+```
+pixy --stats fst \
 --vcf test_filled.vcf.gz \
 --populations sample_IDs.txt \
 --window_size 10287 \
 --n_cores 2 \
 --output_folder pixy_output \
 --bypass_invariant_check \
---fst_type hudson```
+--fst_type hudson
+```
 
 

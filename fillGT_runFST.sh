@@ -38,16 +38,30 @@ do
 	# write sample IDs to temp file, then add population column
 	bcftools query -l $output_file > ${sample_IDs}.tmp
 	
+	# Use this chunk if comparing to input population
+	
+	#while IFS= read -r sample; do
+	#	if [[ "$sample" == *"P3_wnv"* ]]; then
+	#		echo -e "${sample}\tP3_wnv"
+	#	else
+	#		echo -e "${sample}\t${pop_name}"
+	#	fi
+	#done < ${sample_IDs}.tmp > $sample_IDs
+	
+	#rm ${sample_IDs}.tmp
+	# end Claude contribution
+	
+	# Use this chunk if comparing between sample types
+	
 	while IFS= read -r sample; do
-		if [[ "$sample" == *"P3_wnv"* ]]; then
-			echo -e "${sample}\tP3_wnv"
+		if [[ "$sample" == *"saliva"* ]]; then
+			echo -e "${sample}\tsaliva"
 		else
-			echo -e "${sample}\t${pop_name}"
+			echo -e "${sample}\tbody"
 		fi
 	done < ${sample_IDs}.tmp > $sample_IDs
 	
 	rm ${sample_IDs}.tmp
-	# end Claude contribution
 	
 	# run pixy
 	pixy --stats fst \

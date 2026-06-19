@@ -20,7 +20,7 @@ make_vcf_format_sample_cols_DPADAF.py - same as above but also extracts AF value
 make_vcf_format_sample_cols_GTDPADAF.py - same as above but also extracts GT values <br>
 ^ this one does not work with SNPGenie - SNPGenie only expects DP:AD, FST calculations with Pixy require GT and AF <br>
 <br>
-merge_VCFs_for_pixy.sh - generates merged GTDPADAF VCF files for each sample type within each condition for divergence/FST calculations <br>
+merge_VCFs_for_input_pixy.sh - generates merged GTDPADAF VCF files for each sample type within each condition for divergence/FST calculations between condition/sample type populations and input population <br>
 <br>
 vcf_reformat_PY.sh - calls make_vcf_format_sample_cols_DPAD(AF).py to reformat all vcf files in working directory <br>
 ^ requires bcftools for bgzip, and python
